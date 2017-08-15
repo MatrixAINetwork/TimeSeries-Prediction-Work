@@ -1,0 +1,11 @@
+library("vars");
+tmp<-data.163.0151.0630.allAxisTemp.merge.var.axle1[1:26304,];
+varest<-VAR(tmp,lag.max = 10,ic=c("SC"));
+varprd<-predict(varest,n.ahead = 30,ci=0.05);
+
+tmp_all<-data.163.0151.0630.allAxisTemp.merge.var.axle1[,1];
+tmp_prd<-tmp[,1];
+tmp_prd[26305:26334]<-varprd$fcst$ZX_WD_1_1[,1];
+
+plot(tmp_prd, type="o", xlim=c(26300,26334),ylim=c(33.5,34.5))
+

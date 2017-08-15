@@ -1,0 +1,27 @@
+DECLARE
+  P_QUERY VARCHAR2(200);
+  P_TIME_RANGE NUMBER;
+  P_CONSITION VARCHAR2(200);
+  L_FILENAME_PRE VARCHAR2(200);
+BEGIN
+  P_QUERY := 
+'select gzkssj from ITF_TCMSFAULT_START 
+where 1=1
+and t_type_id = 240
+and loco_no = 142
+and gzdm = 1423';
+
+  P_CONSITION := 
+' and t_type_id = 240 
+ and loco_no = 142';
+
+  P_TIME_RANGE := 2;
+  L_FILENAME_PRE := '240_142_1423';
+
+  TIME_RANGE_OUT_PROCEDURE(
+    P_QUERY => P_QUERY,
+    P_TIME_RANGE => P_TIME_RANGE,
+    P_CONSITION => P_CONSITION,
+    L_FILENAME_PRE => L_FILENAME_PRE
+  );
+END;

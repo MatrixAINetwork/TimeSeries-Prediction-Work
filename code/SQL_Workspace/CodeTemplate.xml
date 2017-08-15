@@ -1,0 +1,42 @@
+ï»?<?xml version = '1.0' encoding = 'UTF-8'?>
+<rows>
+   <row>
+      <key>ct</key>
+      <value>CREATE TABLE table ()</value>
+   </row>
+   <row>
+      <key>ssf</key>
+      <value>SELECT * FROM table</value>
+   </row>
+   <row>
+      <key>ii</key>
+      <value>INSERT INTO table VALUES ()</value>
+   </row>
+   <row>
+      <key>df</key>
+      <value>DELETE FROM table WHERE </value>
+   </row>
+   <row>
+      <key>cp</key>
+      <value>CREATE PROCEDURE procedure_name
+      [ (parameter]) ]
+      IS
+          [declaration_section]
+      BEGIN
+          ...
+      END procedure_name;
+      </value>
+   </row>
+   <row>
+      <key>cf</key>
+      <value>CREATE FUNCTION function_name
+          [ (parameter) ]
+          RETURN return_datatype
+          IS
+              [declaration_section]
+          BEGIN
+              ...
+          END function_name;
+      </value>
+   </row>
+</rows>
